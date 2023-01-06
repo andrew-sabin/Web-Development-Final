@@ -1,0 +1,264 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Rubik+Dirt&display=swap');
+
+
+         @import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*   ----- Variables  -----  */
+:root {
+  --darkest:hsla(210, 100%, 21%, 1);
+  --darkesttransp:hsla(210, 100%, 21%, .9);
+  --darker:hsla(210, 100%, 29%, 1);
+  --darkertransp:hsla(210, 100%, 70%, 0.75);
+  --medium:hsla(210, 100%, 34%, 1);
+  --lighter:hsla(210, 100%, 70%, 1);
+  --lighest:hsla(210, 100%, 80%, 1);
+  --rowselct:hsla(210, 86%, 92%, 1);
+  --background:hsla(210, 87%, 82%, 1);
+  --backgrdtransp:hsla(210, 87%, 82%, 0.65);
+  --background2: hsla(210, 90%, 85%, 1);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+html{
+  position:relative;
+  min-height:100%;
+}
+
+body {       /* Can alternatively define in html {} or :root {} */
+  color:var(--darkest);
+  background-color:var(--background);
+  background: url(./images/luis-reyes-mTorQ9gFfOg-unsplash.jpg);
+  font-family:'Mukta', sans-serif;
+  text-align:center;
+  font-size:17.5px;
+  margin:0;
+  padding:0;
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {background-color:var(--darker); color:var(--background); margin: 0 auto; padding:10px; text-align: left; font-weight:bold;}
+nav a {
+  text-decoration:none;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  background-color: var(--darkest);
+  padding:4px;
+  margin:4px;
+  color:var(--background);
+  font-weight:bold;}
+nav a:hover{
+  text-decoration:underline;
+  background-color: var(--lighest);
+  color:var(--darkest);
+  padding:4px;
+  margin:4px;
+  font-weight:bold;
+}
+
+/*  ----- Page layout blocks -----  */
+header {background-color:var(--darkesttransp); 
+  padding:10px; 
+  color:rgb(209, 206, 206); 
+  text-align:left;
+  font-weight: bold;
+}
+main {background-color:var(--backgrdtransp); 
+  padding:10px; padding-bottom:20px; 
+  margin:10px; 
+  color:var(--darkest); 
+  font-weight:100;
+}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+footer {background-color:var(--darkesttransp); margin:0px; padding:10px; color:rgb(209, 206, 206);
+position:absolute; font-weight:200; text-align: left; left:0; bottom:0; height:100px; width:100%;}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {font-weight: bold;} /* Define consistant font family.*/
+h1 {font-family: 'Rubik Dirt', cursive;font-weight:300;}
+h2 {text-align:left;}
+h3 {font-weight:bold;}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {border-collapse:collapse; margin:0 auto; padding:8px;}
+caption {color:var(--darkest);text-align:left;}
+thead {background-color: var(--medium);
+  color: var(--background); padding: 8px;
+  }
+  
+tbody {}
+tfoot {}
+tr,td th,td {
+  border: 2px solid var(--darkest);
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: var(--darkest);
+  color: var(--background);
+  padding: 4px;
+  /* border-bottom: 2px solid var(--darkest);
+  border-left: 2px solid var(--lighter);
+  border-right: 2px solid var(--lighter); */
+}
+  tr:nth-child(odd){
+    background-color:var(--lighest);
+  }
+  tr:nth-child(even) {
+    background-color:var(--lighter);}
+  tbody> tr:hover{
+    background-color:var(--rowselct);
+    color:var(-darkest);
+    }
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {text-align: center; padding: 2px;
+  color:var(--darkest);
+  background-color:var(--backgrdtransp);
+  font-family:'Mukta', sans-serif;
+  text-align:center;
+  font-size:17.5px;
+  font-weight:100;
+  margin:0;}
+fieldset {border:1px var(--darker)}
+legend {text-align:center;}
+label {
+  display:block;
+  margin-top:10px;
+}
+  button {
+    padding:5px;
+    background-color: var(--darker);
+    color: rgb(234, 234, 234);
+    border:1px solid var(--darker);
+    border-radius:3px;
+  }
+  button:hover{
+    background-color: var(--lighest);
+    color: var(--darkest);
+  }
+  input {
+    padding:2px;
+    text-align: left;
+    font-family: 'Mukta', sans-serif;
+  }
+  output {}
+  meter {}
+  progress {}
+  select {
+    padding:5px;
+    background-color: var(--medium);
+    color: rgb(234, 234, 234);
+    border:1px solid var(--darker);
+    border-radius:3px;
+  }
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
