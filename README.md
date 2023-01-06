@@ -3,15 +3,15 @@ Portfolio project website where users can set an exercise as well as a date and 
 
 Use Create, Read, Update, and Delete operations with JSON data to keep track of the user data. Uses MongoDB as a database for the JSON data.
 
-# Screenshots
+## Screenshots
 
-## Homepage
+### Homepage
 
-## Add Page
+### Add Page
 
-## Edit Page
+### Edit Page
 
-#To Do
+## To Do
 
 1.) Find a web service to host the project
 2.) Let the user input the time
