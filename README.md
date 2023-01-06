@@ -7,6 +7,8 @@ Use Create, Read, Update, and Delete operations with JSON data to keep track of 
 
 ### Homepage
 
+![imagefile](https://github.com/andrew-sabin/Web-Development-Final/blob/main/screenshots/Home%20Page.png?raw=true)
+
 ### Add Page
 
 ### Edit Page
