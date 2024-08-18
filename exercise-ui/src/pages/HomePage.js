@@ -32,16 +32,17 @@ function HomePage({ setExercise }) {
 
     // DELETE an exercise from the routine  
     const onDelete = async _id => {
-        const response = await fetch('/exercises/'+_id, {method: 'DELETE'});
-        if (response.status === 204) {
-            const getResponse = await fetch('/exercises');
-            const exercises = await getResponse.json();
-            setExercises(exercises);
-        } else {
-            console.error('Failed to delete exercise with _id'+_id+' status code ='+response.status)
+        if (window.confirm("Do you want to delete this exercise?")){
+            const response = await fetch('/exercises/'+_id, {method: 'DELETE'});
+            if (response.status === 204) {
+                const getResponse = await fetch('/exercises');
+                const exercises = await getResponse.json();
+                setExercises(exercises);
+            } else {
+                console.error('Failed to delete exercise with _id'+_id+' status code ='+response.status)
+            }
         }
     }
-
 
     // DISPLAY the current exercise routine
     return (

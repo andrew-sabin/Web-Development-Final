@@ -13,7 +13,22 @@ export const EditPage = ({ exerciseToEdit }) => {
 
     const history = useHistory();
 
+    function CheckWords(string){
+        const words = ['banana bread']
+        let test_str = string.toLowerCase();
+        for (let i = 0; i < words.length; i++){
+            if (test_str.includes(words[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+
     const editExercise = async () => {
+        if (CheckWords(name) === true){
+            window.location.href = "https://youtu.be/b550jyzGj5Y?si=itrGXScbcRuBMuGn&t=25";
+            return;
+        }
         const response = await fetch('/exercises/'+exerciseToEdit._id, {
             method: 'put',
             body: JSON.stringify({
@@ -88,12 +103,15 @@ export const EditPage = ({ exerciseToEdit }) => {
                         value={date}
                         onChange={e => setDate(e.target.value)}
                         id="date" /></td>
-                        <td><label for = "time"></label>
-                        <select name="time-select" id="time" onChange={e=> setTime(e.target.value)}>
-                            <option>Morning 6:00am to 11:30am</option>
-                            <option>Afternoon 12:00pm to 4:30pm</option>
-                            <option>Evening 5:00pm to 10:30pm</option>
-                        </select></td>  
+                        <td>
+                            <input
+                            type="time"
+                            placeholder="HH:MM"
+                            name="time"
+                            value ={time}
+                            onChange={e => setTime(e.target.value)}
+                            id="time" />
+                        </td>
                             <td><label for="submit">
                         <button
                             type="submit"

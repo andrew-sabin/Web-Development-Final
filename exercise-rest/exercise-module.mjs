@@ -23,7 +23,7 @@ const exerciseSchema = mongoose.Schema({
     weight:{type:Number, required:true},
     unit:{type:String, required:true},
     date:{type:Date, required:true},
-    time:{type:String, required:true}
+    time:{type:Date, required:true}
 });
 //Compile the model from the schema
 const Exercise = mongoose.model("Exercise",exerciseSchema);

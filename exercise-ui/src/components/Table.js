@@ -17,7 +17,7 @@ function Table({ exercises, onDelete, onEdit }) {
                 <th>Weight Used</th>
                 <th>Units Used</th>
                 <th>Date</th>
-                <th>Time (Time Frame)</th>
+                <th>Time (24-hour)</th>
                 <th>Delete</th>
                 <th>Edit</th>
                 </tr>
