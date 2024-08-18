@@ -24,32 +24,45 @@ export const EditPage = ({ exerciseToEdit }) => {
         return false;
     }
 
-    const editExercise = async () => {
-        if (CheckWords(name) === true){
-            window.location.href = "https://youtu.be/b550jyzGj5Y?si=itrGXScbcRuBMuGn&t=25";
-            return;
-        }
-        const response = await fetch('/exercises/'+exerciseToEdit._id, {
-            method: 'put',
-            body: JSON.stringify({
-                name:name,
-                reps:reps,
-                weight:weight,
-                unit:unit,
-                date:date,
-                time:time
-            }),
-            headers:{'Content-Type': 'application/json',}
-        });
+    function CheckForNums(string){
+        let strRegex = new RegExp(/^[0-9]+$/i)
+        let result = strRegex.test(string);
+        return result;
+    }
 
-        if (response.status === 200){
-            alert("Successfully edited exercise!");
+    function CheckForAlphaNumeric(string){
+        let strRegex = new RegExp(/^[a-z0-9 ]+$/i);
+        let result = strRegex.test(string);
+        return result;
+    }
+
+    const editExercise = async () => {
+        if (CheckForAlphaNumeric(name) === false || CheckForNums(name) === true || CheckWords(name) === true){
+            alert("Invalid Input. \nNo symbols or numbers can be used for the input.");
         }
         else {
-            const errMessage = await response.json();
-            alert('Failed to update exercise. Error Code: '+response.status+' .'+errMessage.Error);
+            const response = await fetch('/exercises/'+exerciseToEdit._id, {
+                method: 'put',
+                body: JSON.stringify({
+                    name:name,
+                    reps:reps,
+                    weight:weight,
+                    unit:unit,
+                    date:date,
+                    time:time
+                }),
+                headers:{'Content-Type': 'application/json',}
+            });
+    
+            if (response.status === 200){
+                alert("Successfully edited exercise!");
+            }
+            else {
+                const errMessage = await response.json();
+                alert('Failed to update exercise. Error Code: '+response.status+' .'+errMessage.Error);
+            }
+            history.push("/");
         }
-        history.push("/");
     }
 
     return (

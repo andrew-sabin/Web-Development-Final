@@ -23,26 +23,39 @@ export const CreatePage = () => {
         return false;
     }
 
+    function CheckForNums(string){
+        let strRegex = new RegExp(/^[0-9]+$/i)
+        let result = strRegex.test(string);
+        return result;
+    }
+
+    function CheckForAlphaNumeric(string){
+        let strRegex = new RegExp(/^[a-z0-9 ]+$/i);
+        let result = strRegex.test(string);
+        return result;
+    }
+
     const addExercise = async () => {
-        if (CheckWords(name) === true){
-            window.location.href = "https://youtu.be/b550jyzGj5Y?si=itrGXScbcRuBMuGn&t=25";
-            return;
+        if (CheckForAlphaNumeric(name) === false || CheckForNums(name) === true || CheckWords(name) === true){
+            alert("Invalid Input. \nNo symbols or numbers can be used for the input.");
         }
-        const newExercise = {name,reps,weight,unit,date,time};
-        const response = await fetch('/exercises', {
-            method: 'post',
-            body: JSON.stringify(newExercise),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        if(response.status === 201){
-            alert("Successfully added your new routine!");
-        }
-        else {
-            alert('Failed to add a new exercise, Error Code = '+ response.status);
-        }
-        history.push("/");
+        else{
+            const newExercise = {name,reps,weight,unit,date,time};
+            const response = await fetch('/exercises', {
+                method: 'post',
+                body: JSON.stringify(newExercise),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            if(response.status === 201){
+                alert("Successfully added your new routine!");
+            }
+            else {
+                alert('Failed to add a new exercise, Error Code = '+ response.status);
+            }
+            history.push("/");
+            }
     };
 
 
