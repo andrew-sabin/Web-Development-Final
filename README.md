@@ -23,6 +23,4 @@ https://main--andysexerciseplanner.netlify.app/
 
 ## To Do
 
-1.) Find a web service to host the project
-
-2.) Let the user input the time
+1.) Fix the issues with Netlify not allowing edit and delete requests from heroku server.
