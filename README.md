@@ -10,12 +10,11 @@ https://main--andysexerciseplanner.netlify.app/
 
 ### Homepage
 
-![imagefile](https://github.com/andrew-sabin/Web-Development-Final/blob/main/screenshots/Home%20Page.png?raw=true)
+![imagefile](https://raw.githubusercontent.com/andrew-sabin/Web-Development-Final/main/screenshots/Screenshot%202024-08-25%20at%2023-54-21%20Exercise%20Planing%20Application.png)
 
 ### Add Page
-![image without calander](https://github.com/andrew-sabin/Web-Development-Final/blob/main/screenshots/Add%20Page.png?raw=true)
 
-![image with calander](https://github.com/andrew-sabin/Web-Development-Final/blob/main/screenshots/Add%20Exercise%20Page%20Calander.png?raw=true)
+![image with calander](https://raw.githubusercontent.com/andrew-sabin/Web-Development-Final/main/screenshots/Screenshot%202024-08-25%20at%2023-56-12%20Exercise%20Planing%20Application.png)
 
 ### Edit Page
 
