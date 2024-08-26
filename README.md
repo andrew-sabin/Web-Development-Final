@@ -18,8 +18,7 @@ https://main--andysexerciseplanner.netlify.app/
 
 ### Edit Page
 
-![image](https://github.com/andrew-sabin/Web-Development-Final/blob/main/screenshots/Edit%20Page.png?raw=true)
+![image](https://raw.githubusercontent.com/andrew-sabin/Web-Development-Final/main/screenshots/Edit%20Page%202024.png)
 
 ## To Do
 
-1.) Fix the issues with Netlify not allowing edit and delete requests from heroku server.
