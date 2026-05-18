@@ -4,10 +4,10 @@ Portfolio project website where users can set an exercise as well as a date and 
 Use Create, Read, Update, and Delete operations with JSON data to keep track of the user data. Uses MongoDB as a database for the JSON data.
 
 ## Website
-https://main--andyexerciseplanner.netlify.app/
+https://stalwart-lokum-44dcb3.netlify.app/
 
 ## Screenshots
-
+**Note:** _Screenshots are missing change for website application. No longer carrying time due to planned changes with data._
 ### Homepage
 
 ![imagefile](https://raw.githubusercontent.com/andrew-sabin/Web-Development-Final/main/screenshots/Screenshot%202024-08-25%20at%2023-54-21%20Exercise%20Planing%20Application.png)
